@@ -1,152 +1,175 @@
-# Medical-Chain
-MediChain is an innovative solution aimed at revolutionizing the healthcare preauthorization process using blockchain technology.
-Project Description
+# MEDICHAIN - A Patient Management and Insurance Claims Decentralized App
+
+## Project Description
+
 MediChain is an innovative solution aimed at revolutionizing the healthcare preauthorization process using blockchain technology. This project addresses the inefficiencies and delays inherent in the traditional preauthorization process by leveraging the immutable and transparent nature of blockchain.
 
-# Importance
+### Importance
+
 The traditional healthcare preauthorization process is often cumbersome, slow, and prone to errors, leading to delays in patient care and increased administrative costs. By utilizing blockchain technology, the Preauth Project aims to streamline this process, providing a secure, transparent, and efficient system that benefits patients, healthcare providers, and insurance companies alike.
 
-# Use Cases
-Patient Management: Patients can submit preauthorization requests and track their status in real-time.
-Healthcare Providers: Hospitals and clinics can manage patient records, submit requests, and receive approvals faster.
-Insurance Companies: Insurance firms can efficiently manage and process preauthorization requests, reducing processing times and improving customer satisfaction.
+### Use Cases
 
-# Advantages
-Transparency: All transactions and operations are recorded on the blockchain, ensuring transparency for all parties involved.
-Security: The use of blockchain technology ensures that data is immutable and secure from unauthorized modifications.
-Efficiency: Automating the preauthorization process reduces the time and effort required, leading to faster approvals and better patient care.
-Cost-Effective: Reduces administrative overhead and costs associated with the manual processing of preauthorizations.
-Decentralization: Eliminates the need for a central authority, reducing the risk of data breaches and single points of failure.
+1. **Patient Management**: Patients can submit preauthorization requests and track their status in real-time.
+2. **Healthcare Providers**: Hospitals and clinics can manage patient records, submit requests, and receive approvals faster.
+3. **Insurance Companies**: Insurance firms can efficiently manage and process preauthorization requests, reducing processing times and improving customer satisfaction.
 
-# Key Components
-Frontend: A React application that provides an intuitive interface for patients, healthcare providers, and insurance companies to interact with the system.
-Backend: A Node.js server that handles user authentication, interacts with the PostgreSQL database, and communicates with the blockchain.
-Smart Contracts: Solidity contracts deployed on the Ethereum blockchain using Truffle to manage healthcare preauthorization processes securely and transparently.
+### Advantages
 
-# Folder Structure
-backend: Contains the Node.js server files.
-contracts: Contains the Solidity smart contracts.
-frontend: Contains the React application.
-migrations: Contains the migration scripts for the smart contracts.
-test: Contains test files for the smart contracts.
-.gitignore: Specifies files and directories to be ignored by git.
-README.md: This file.
-truffle-config.js: Configuration file for Truffle.
+- **Transparency**: All transactions and operations are recorded on the blockchain, ensuring transparency for all parties involved.
+- **Security**: The use of blockchain technology ensures that data is immutable and secure from unauthorized modifications.
+- **Efficiency**: Automating the preauthorization process reduces the time and effort required, leading to faster approvals and better patient care.
+- **Cost-Effective**: Reduces administrative overhead and costs associated with the manual processing of preauthorizations.
+- **Decentralization**: Eliminates the need for a central authority, reducing the risk of data breaches and single points of failure.
+- 
+### Key Components
 
-# Project Layout
-# Frontend
-Uses React for the user interface.
-Implements routing using react-router-dom.
-Main components:
-Admin: Admin layout.
-Auth: Authentication layout.
-Patient: Patient layout.
-Insurance: Insurance company layout.
-
-# Backend
-Uses Express for the server.
-Implements authentication using bcrypt and JWT.
-Connects to a PostgreSQL database.
-Main endpoints:
-/api/register: Registers a new user.
-/api/login: Logs in an existing user.
-/api/insuranceCompanies: Retrieves a list of insurance companies.
+1. **Frontend**: A React application that provides an intuitive interface for patients, healthcare providers, and insurance companies to interact with the system.
+2. **Backend**: A Node.js server that handles user authentication, interacts with the PostgreSQL database, and communicates with the blockchain.
+3. **Smart Contracts**: Solidity contracts deployed on the Ethereum blockchain using Truffle to manage healthcare preauthorization processes securely and transparently.
 
 
-# Smart Contracts
-Written in Solidity.
-Manages healthcare preauthorization processes.
-Main contracts:
-Cashless.sol
-Main_Structure.sol
-Migrations.sol
-Patient_Management_System.sol
-Reimbursement.sol
+## Folder Structure
 
-# How to Run
-Prerequisites
-Node.js
-npm (Node Package Manager)
-PostgreSQL
-Truffle
-Ganache (for local Ethereum blockchain)
+- `backend`: Contains the Node.js server files.
+- `contracts`: Contains the Solidity smart contracts.
+- `frontend`: Contains the React application.
+- `migrations`: Contains the migration scripts for the smart contracts.
+- `test`: Contains test files for the smart contracts.
+- `.gitignore`: Specifies files and directories to be ignored by git.
+- `README.md`: This file.
+- `truffle-config.js`: Configuration file for Truffle.
 
-# Frontend
-1. Navigate to the frontend directory:
+## Project Layout
 
-2. cd frontend
-Install the required packages:
+### Frontend
 
-3. npm install
-Start the React application:
+- Uses React for the user interface.
+- Implements routing using `react-router-dom`.
+- Main components:
+    - `Admin`: Admin layout.
+    - `Auth`: Authentication layout.
+    - `Patient`: Patient layout.
+    - `Insurance`: Insurance company layout.
 
-npm start
-The React application will be running on http://localhost:3000.
+### Backend
 
-# Backend
-Navigate to the backend directory:
+- Uses Express for the server.
+- Implements authentication using bcrypt and JWT.
+- Connects to a PostgreSQL database.
+- Main endpoints:
+    - `/api/register`: Registers a new user.
+    - `/api/login`: Logs in an existing user.
+    - `/api/insuranceCompanies`: Retrieves a list of insurance companies.
 
-cd backend
-Install the required packages:
+### Smart Contracts
 
-npm install
-Start the Node.js server:
-
-node server.js
-The Node.js server will be running on http://localhost:3001.
-
-# Smart Contracts
-Navigate to the root directory of the project.
-
-Install Truffle globally if you haven't already:
-
-npm install -g truffle
-Compile the smart contracts:
-
-truffle compile
-Deploy the smart contracts to your local blockchain (Ganache):
-
-truffle migrate
+- Written in Solidity.
+- Manages healthcare preauthorization processes.
+- Main contracts:
+    - `Cashless.sol`
+    - `Main_Structure.sol`
+    - `Migrations.sol`
+    - `Patient_Management_System.sol`
+    - `Reimbursement.sol`
 
 
-# Database Setup
-Make sure you have PostgreSQL installed and running.
+## How to Run
 
-Create a new PostgreSQL database:
+### Prerequisites
 
-createdb preauth
-Connect to the database and create the necessary tables:
+- Node.js
+- npm (Node Package Manager)
+- PostgreSQL
+- Truffle
+- Ganache (for local Ethereum blockchain)
 
-CREATE TABLE users (
-    id SERIAL PRIMARY KEY,
-    username VARCHAR(50) UNIQUE NOT NULL,
-    email VARCHAR(50) UNIQUE NOT NULL,
-    password_hash VARCHAR(100) NOT NULL,
-    role VARCHAR(50) NOT NULL
-);
+### Frontend
 
-CREATE TABLE insurancecompany (
-    id SERIAL PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
-    address VARCHAR(255) NOT NULL,
-    contact_info VARCHAR(255) NOT NULL
-);
-Running Tests
-To run tests for the smart contracts:
+1. Navigate to the `frontend` directory:
+    ```bash
+    cd frontend
+    ```
 
-Navigate to the root directory of the project.
+2. Install the required packages:
+    ```bash
+    npm install
+    ```
 
-# Run the tests:
+3. Start the React application:
+    ```bash
+    npm start
+    ```
 
-To run tests for the smart contracts:
+The React application will be running on `http://localhost:3000`.
+
+### Backend
+
+1. Navigate to the `backend` directory:
+    ```bash
+    cd backend
+    ```
+
+2. Install the required packages:
+    ```bash
+    npm install
+    ```
+
+3. Start the Node.js server:
+    ```bash
+    node server.js
+    ```
+
+The Node.js server will be running on `http://localhost:3001`.
+
+### Smart Contracts
 
 1. Navigate to the root directory of the project.
 
-2. Run the tests:
+2. Install Truffle globally if you haven't already:
+    ```bash
+    npm install -g truffle
+    ```
 
-# DEMO Images
+3. Compile the smart contracts:
+    ```bash
+    truffle compile
+    ```
 
-# User Authentication
+4. Deploy the smart contracts to your local blockchain (Ganache):
+    ```bash
+    truffle migrate
+    ```
+
+### Database Setup
+
+1. Make sure you have PostgreSQL installed and running.
+
+2. Create a new PostgreSQL database:
+    ```bash
+    createdb preauth
+    ```
+
+3. Connect to the database and create the necessary tables:
+    ```sql
+    CREATE TABLE users (
+        id SERIAL PRIMARY KEY,
+        username VARCHAR(50) UNIQUE NOT NULL,
+        email VARCHAR(50) UNIQUE NOT NULL,
+        password_hash VARCHAR(100) NOT NULL,
+        role VARCHAR(50) NOT NULL
+    );
+
+    CREATE TABLE insurancecompany (
+        id SERIAL PRIMARY KEY,
+        name VARCHAR(100) NOT NULL,
+        address VARCHAR(255) NOT NULL,
+        contact_info VARCHAR(255) NOT NULL
+    );
+    ```
+
+
+## Running Tests
 
 To run tests for the smart contracts:
 
@@ -197,6 +220,3 @@ Feel free to fork this repository and make contributions. Pull requests are welc
 ## License
 
 This project is licensed under the MIT License.
-
-
-
