@@ -148,5 +148,55 @@ To run tests for the smart contracts:
 
 # User Authentication
 
+To run tests for the smart contracts:
+
+1. Navigate to the root directory of the project.
+
+2. Run the tests:
+    ```bash
+    truffle test
+    ```
+
+<br>
+
+# Demo Images
+## User Authentication
+
+| Login Screen | Registration Page |
+|:---:|:---:|
+| ![Login Screen](https://github.com/user-attachments/assets/53ffdbc0-82ed-421f-9b8e-b2e5f293ad98) | ![Registration Page](https://github.com/user-attachments/assets/4b61d981-ee10-4c94-aacd-291ef05a1660) |
+
+<br>
+
+## Doctor Dashboard 
+### Patient List
+![image](https://github.com/user-attachments/assets/6af19b59-a796-4157-af3f-c6f38f2778a4)
+### Bill Creation Interface
+![image](https://github.com/user-attachments/assets/4a3d35fc-f3a9-4a4a-b05b-3292307fb5d7)
+
+<br>
+
+## Insurance Company Dashboard 
+### Policy Creation Form
+![image](https://github.com/user-attachments/assets/47ace7e3-27b7-46fb-8798-9bf022540531)
+### Active Policies Overview
+![image](https://github.com/user-attachments/assets/fc92851b-76e7-42ab-9f3a-b422076e78ca)
+
+<br>
+
+## Patient Dashboard
+### Patient Bill History
+![image](https://github.com/user-attachments/assets/e015e00a-f074-4bac-86fb-b530ae8575c1)
+### Pre-authorization Request Form
+![image](https://github.com/user-attachments/assets/55866297-85f2-4936-95c8-46a98dcfc163)
+
+## Contributing
+
+Feel free to fork this repository and make contributions. Pull requests are welcome.
+
+## License
+
+This project is licensed under the MIT License.
+
 
 
